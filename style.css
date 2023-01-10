@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    margin: 20px;
+    margin: 15px;
 }
 
 header h1 {
@@ -25,10 +25,11 @@ header h1 {
 }
 
 nav ul{
-    margin-top: 25px;
+    margin-top: 15px;
     list-style-type: none;
-    /* display: flex; */
+    display: inline-flex;
     flex-direction: column;
+    row-gap: 15px;
 }
 
 nav li{
@@ -37,11 +38,31 @@ nav li{
     display: inline;
 }
 
+.dot {
+    display: none;
+}
+
+li.active .dot {
+    display: block;
+}
+
 #main {
     background: transparent;
     height: 100vh;
-    border: 25px solid #020020;
-}
+    border: 20px solid #020020;
+    position: relative;
+  }
+/* #main:after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: transparent;
+    z-index: -1;
+    border: 18px solid white;
+} */
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
