@@ -156,3 +156,19 @@ closeTrigger.on('click', function(){
                 tlClose.restart();
             }
 });
+
+
+var lastScrollTop; // This Varibale will store the top position
+navbar = document.querySelector('.navigation'); // Get The NavBar
+window.addEventListener('scroll',function(){
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if(scrollTop > lastScrollTop){ //if it will be greater than the previous
+    navbar.style.top='-80px';
+  }
+  
+  else{
+    navbar.style.top='0';
+  }
+  
+  lastScrollTop = scrollTop; //New Position Stored
+});

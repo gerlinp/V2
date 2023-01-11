@@ -4,103 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Gerlin Pierre-Louis</title>
 </head>
 <body>
-
-    
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
-
-<div id="main">
-
-    <!-- <nav>
-        <label id="menu-container" for="menu">
-            <input type="checkbox" id="menu"/> 
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <div id="main">
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="navigation__button">
+              <span class="navigation__icon" aria-label="toggle navigation menu"></span>
+            </label>
+            <div class="navigation__background"></div>
         
-        <ul class="nav-container">
-            <li class="nav-link active"> 
-                <div class="dot">●</div>
-                <div class="nav-text">Home</div>
-            </li>
-            <li class="nav-link"> 
-                <div class="dot">●</div>
-                <div class="nav-text">Experience</div>
-            </li>
-            <li class="nav-link"> 
-                <div class="dot">●</div>
-                <div class="nav-text">Projects</div>
-            </li>
-            <li class="nav-link"> 
-                <div class="dot">●</div>
-                <div class="nav-text">Contact</div>
-            </li>
-        </ul>
-    </nav> -->
-
-
-    <div  class="open">
-        <span class="cls"></span>
-        <span>
-            <ul class="sub-menu ">
-                <li>
-                    <a href="#about" title="about">Sobre / About</a>
-                </li>
-                <li>
-                    <a href="#skills" title="skills">Habilidades / Skills</a>
-                </li>
-                <li>
-                    <a href="#jobs" title="jobs">Trabalhos / Jobs</a>
-                </li>
-                <li>
-                    <a href="#contact" title="contact">Contato / Contact</a>
-                </li>
-            </ul>
-        </span>
-        <span class="cls"></span>
+            <nav class="navigation__nav" role="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"><span>01</span>Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"><span>02</span>About</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"><span>03</span>Experience</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"><span>04</span>Projects</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"><span>05</span>Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <header>
+            <div>
+                <h1>GERLIN</h1>
+                <h1>PIERRE-LOUIS</h1>
+                <p>Software Developer</p>
+            </div>
+            <div>
+                <p class="header-info">
+                    I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at Upstatement.
+                </p>
+            </div>
+        </header>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <section>
+        <div>
+            <h2 class="numbered-heading">01. About Me</h2>
+            <p>
+                Hello! My name is Gerlin and I enjoy creating things that live on the internet. I'm a self taught developer, who switched from a career in IT, and for as long as I can remember I've always had an interest in tech — While always having to assist clients in fixing and guiding them with programs got me more interested in buidling them to make better experiences. 
+            </p>
+            <p>
+                Fast forward to today I've had the privelege of working for a <a href="https://us.mullenlowe.com/" rel="noopener noreferrer" target="_blank">Digital management platform</a> as a software engineer CO-OP — Was selected for a <a href="https://us.mullenlowe.com/" rel="noopener noreferrer" target="_blank">fellowship</a> that gave me the tools and resources to make me a better developer while also helping to bridge the gap between the technology industry and underrepresented individuals. And contributed to <a href="https://us.mullenlowe.com/" rel="noopener noreferrer" target="_blank">civic tech groups</a> to be able help, and improve the way goverment and community organizations serve the public by using technology.
+            </p>
     
-
-
-
-
-    <!-- <header>
-        <div class="name-container">
-            <h1>GERLIN</h1>
-            <h1>PIERRE-LOUIS</h1>
+            <p>
+                Here are a few Programming Languages and technologies I've been using lately:
+            </p>
         </div>
-        <p>Software Developer</p>
-    </header> -->
-</div>
-
-<section>
-    <p>
-        Hello! My name is Gerlin and I enjoy creating things that live on the internet. For as long as I can remember I've always had an interest in tech, from playing my first video game with my uncle, building a websites using old website builders!
-    </p>
-</section>
- 
-<script src="script.js"></script>
+        <ul class="skills-list">
+            <li>Javascript (ES6+)</li>
+            <li>TypeScript</li>
+            <li>Ember.js</li>
+            <li>Ruby/Rails</li>
+            <li>React</li>
+            <li>GraphQl</li>
+        </ul>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
