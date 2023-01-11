@@ -1,5 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro&display=swap');
 
+/* VARIABLES ------------------------------------ */
+
+$color-primary: #278da4;
+$color-secondary: #b13c69;
+$color-accent: #eeea72;
+$color-shade: #eee;
+
+$color-text: #343434;
+$color-bg: #3acec2;
+$color-bg-light: #009fe1;
+
+$font-stack-primary: 'Raleway', sans-serif;
+$font-stack-secondary: 'Bree Serif', serif;
+
+/* HEADER & FOOTER -------------------------------- */
+
+header {
+  height: 450px;
+  background: linear-gradient($color-bg-light, $color-bg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  h1 {
+    font-size: 4.8em;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+  }
+  p {
+    color: $color-accent;
+    font-size: 1.25em;
+    margin: 0;
+  }
+}
+
+footer {
+  padding: 2em 0 0;
+  height: 100px;
+  background-color: $color-shade;
+  margin-top: 3.5em;
+}
+
+/* COMPONENTS ------------------------------------- */
+
+.main-nav {
+  margin-top: 1em;
+  li {
+    display: inline-block;
+    margin: 0 0.65em;
+  }
+  a {
+    font-size: 0.85em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5em;
+    transition: 0.3s;
+    &:hover {
+      color: $color-accent;  
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 1em;
+  border: 1px solid $color-shade;
+  border-radius: 0.25em;
+  h1 {
+    margin: 0.35em 0 0;
+    line-height: 1.25;
+  }  
+  .icon {
+    color: $color-primary;
+  }
+}
+
+/* MEDIA QUERIES ---------------------------------- */
+
+@media (max-width: 575px) {
+  header {
+    height: 340px;
+    h1 {
+      font-size: 3.4em;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+  }  
+  .card {
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    background-position: 0 0, 0 45%;
+  }
+  .intro {
+    width: 45%;
+  }
+}
+
+
+
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -103,6 +212,8 @@ li.active .nav-text {
 
 
 /* Hamburger menu */
+
+
 
   /* #menu-container {
    display:flex;

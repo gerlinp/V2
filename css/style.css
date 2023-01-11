@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro&display=swap");
+/* VARIABLES ------------------------------------ */
+/* HEADER & FOOTER -------------------------------- */
+/* line 19, ../Code/V2/scss/style.scss */
+header {
+  height: 450px;
+  background: linear-gradient(#009fe1, #3acec2);
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+/* line 24, ../Code/V2/scss/style.scss */
+header h1 {
+  font-size: 4.8em;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+/* line 29, ../Code/V2/scss/style.scss */
+header p {
+  color: #eeea72;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+/* line 36, ../Code/V2/scss/style.scss */
+footer {
+  padding: 2em 0 0;
+  height: 100px;
+  background-color: #eee;
+  margin-top: 3.5em;
+}
+
+/* COMPONENTS ------------------------------------- */
+/* line 45, ../Code/V2/scss/style.scss */
+.main-nav {
+  margin-top: 1em;
+}
+
+/* line 47, ../Code/V2/scss/style.scss */
+.main-nav li {
+  display: inline-block;
+  margin: 0 0.65em;
+}
+
+/* line 51, ../Code/V2/scss/style.scss */
+.main-nav a {
+  font-size: 0.85em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em;
+  transition: 0.3s;
+}
+
+/* line 57, ../Code/V2/scss/style.scss */
+.main-nav a:hover {
+  color: #eeea72;
+}
+
+/* line 63, ../Code/V2/scss/style.scss */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 1em;
+  border: 1px solid #eee;
+  border-radius: 0.25em;
+}
+
+/* line 69, ../Code/V2/scss/style.scss */
+.card h1 {
+  margin: 0.35em 0 0;
+  line-height: 1.25;
+}
+
+/* line 73, ../Code/V2/scss/style.scss */
+.card .icon {
+  color: #278da4;
+}
+
+/* MEDIA QUERIES ---------------------------------- */
+@media (max-width: 575px) {
+  /* line 81, ../Code/V2/scss/style.scss */
+  header {
+    height: 340px;
+  }
+  /* line 83, ../Code/V2/scss/style.scss */
+  header h1 {
+    font-size: 3.4em;
+  }
+}
+
+@media (min-width: 576px) {
+  /* line 90, ../Code/V2/scss/style.scss */
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* line 94, ../Code/V2/scss/style.scss */
+  .card {
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 100, ../Code/V2/scss/style.scss */
+  header {
+    background-position: 0 0, 0 45%;
+  }
+  /* line 103, ../Code/V2/scss/style.scss */
+  .intro {
+    width: 45%;
+  }
+}
+
+/* line 112, ../Code/V2/scss/style.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 118, ../Code/V2/scss/style.scss */
+body {
+  background: #020020;
+  color: aliceblue;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.85rem;
+  text-shadow: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  /* overflow: hidden; */
+}
+
+/* line 128, ../Code/V2/scss/style.scss */
+header, section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+/* line 135, ../Code/V2/scss/style.scss */
+header h1 {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+/* line 140, ../Code/V2/scss/style.scss */
+nav ul {
+  margin-top: 15px;
+  list-style-type: none;
+  display: inline-flex;
+  row-gap: 15px;
+}
+
+/* line 147, ../Code/V2/scss/style.scss */
+nav li {
+  padding: 2.5px;
+  cursor: pointer;
+  display: inline;
+}
+
+/* line 153, ../Code/V2/scss/style.scss */
+.dot {
+  display: none;
+}
+
+/* line 157, ../Code/V2/scss/style.scss */
+li.active .dot {
+  display: block;
+}
+
+/* line 161, ../Code/V2/scss/style.scss */
+li.active .nav-text {
+  display: none;
+}
+
+/* line 165, ../Code/V2/scss/style.scss */
+#main {
+  height: 100vh;
+  width: 100vw;
+  border: 25px solid #020020;
+  position: relative;
+}
+
+/* line 172, ../Code/V2/scss/style.scss */
+.home {
+  position: absolute;
+  bottom: 20%;
+  font-size: 1rem;
+}
+
+/* line 178, ../Code/V2/scss/style.scss */
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #09f 50%, #020020 50%);
+  bottom: 0px;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0px;
+  z-index: -2;
+}
+
+/* line 190, ../Code/V2/scss/style.scss */
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+  z-index: -2;
+}
+
+/* line 196, ../Code/V2/scss/style.scss */
+.bg3 {
+  animation-duration: 5s;
+  z-index: -2;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/* Hamburger menu */
+/* #menu-container {
+   display:flex;
+    flex-direction:column;
+    width:40px;
+    cursor:pointer;
+  }
+  
+  #menu-container span{
+    background: #fff;
+    border-radius:10px;
+    height:4px;
+    margin: 4px 0;
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  
+  }
+  
+  
+  #menu-container span:nth-of-type(1){
+    width:20px; 
+  }
+  
+  #menu-container span:nth-of-type(3){
+    width:30px;
+  }
+  
+  input[type="checkbox"]{
+    display:none;
+  }
+   
+  input[type="checkbox"]:checked ~ span:nth-of-type(1){
+    transform-origin:bottom;
+    transform:rotatez(45deg) translate(5px,0px)
+  }
+  
+  input[type="checkbox"]:checked ~ span:nth-of-type(2){
+    transform-origin:top;
+    transform:rotatez(-45deg)
+  }
+  
+  
+  input[type="checkbox"]:checked ~ span:nth-of-type(3){
+    transform-origin:bottom;
+    width: 23px !important;
+    transform: translate(17px,-5px) rotatez(45deg);
+  } */
+
+/*# sourceMappingURL=style.css.map */
