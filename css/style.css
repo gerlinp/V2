@@ -37,30 +37,30 @@ p a {
 /* line 48, ../Code/V2/scss/style.scss */
 section {
   background: #020020;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: solid #020020;
   border-width: 0px 20px;
+  padding: 40px 0;
 }
 
-/* line 57, ../Code/V2/scss/style.scss */
+/* line 56, ../Code/V2/scss/style.scss */
 section h2 {
   font-size: 2.5rem;
 }
 
-/* line 63, ../Code/V2/scss/style.scss */
+/* line 61, ../Code/V2/scss/style.scss */
 #main {
   background: transparent;
-  height: 100vh;
+  height: 97vh;
   position: relative;
   border: solid #020020;
   border-width: 20px 20px 0px 20px;
   z-index: 2;
 }
 
-/* line 72, ../Code/V2/scss/style.scss */
+/* line 70, ../Code/V2/scss/style.scss */
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #09f 50%, #020020 50%);
@@ -73,45 +73,40 @@ section h2 {
   z-index: -2;
 }
 
-/* line 84, ../Code/V2/scss/style.scss */
+/* line 82, ../Code/V2/scss/style.scss */
 .bg2 {
   animation-direction: alternate-reverse;
   animation-duration: 4s;
   z-index: -2;
 }
 
-/* line 90, ../Code/V2/scss/style.scss */
+/* line 88, ../Code/V2/scss/style.scss */
 .bg3 {
   animation-duration: 5s;
   z-index: -2;
 }
 
 /* HEADER & FOOTER -------------------------------- */
-/* line 97, ../Code/V2/scss/style.scss */
+/* line 95, ../Code/V2/scss/style.scss */
 header {
   position: absolute;
-  top: 10%;
+  top: 40%;
   z-index: 1;
   margin: 20px;
 }
 
-/* line 102, ../Code/V2/scss/style.scss */
+/* line 100, ../Code/V2/scss/style.scss */
 header h1 {
   font-size: 2.15rem;
   font-family: "Playfair Display", serif;
 }
 
-/* line 106, ../Code/V2/scss/style.scss */
+/* line 104, ../Code/V2/scss/style.scss */
 header p {
   font-size: 1.2rem;
 }
 
 /* line 109, ../Code/V2/scss/style.scss */
-header .header-info {
-  margin-top: 10rem;
-}
-
-/* line 114, ../Code/V2/scss/style.scss */
 footer {
   padding: 2em 0 0;
   height: 100px;
@@ -120,13 +115,13 @@ footer {
 }
 
 /* NAVIGATION ------------------------------------ */
-/* line 123, ../Code/V2/scss/style.scss */
+/* line 118, ../Code/V2/scss/style.scss */
 .navigation__checkbox {
   display: none;
   z-index: 6;
 }
 
-/* line 128, ../Code/V2/scss/style.scss */
+/* line 123, ../Code/V2/scss/style.scss */
 .navigation__button {
   position: fixed;
   top: 0rem;
@@ -138,7 +133,7 @@ footer {
   cursor: pointer;
 }
 
-/* line 139, ../Code/V2/scss/style.scss */
+/* line 134, ../Code/V2/scss/style.scss */
 .navigation__background {
   position: absolute;
   top: 0rem;
@@ -153,7 +148,7 @@ footer {
   transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-/* line 153, ../Code/V2/scss/style.scss */
+/* line 148, ../Code/V2/scss/style.scss */
 .navigation__nav {
   position: fixed;
   top: 0;
@@ -166,7 +161,7 @@ footer {
   transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* line 165, ../Code/V2/scss/style.scss */
+/* line 160, ../Code/V2/scss/style.scss */
 .navigation__list {
   position: absolute;
   top: 50%;
@@ -177,12 +172,12 @@ footer {
   list-style: none;
 }
 
-/* line 175, ../Code/V2/scss/style.scss */
+/* line 170, ../Code/V2/scss/style.scss */
 .navigation__item {
   margin: 1rem;
 }
 
-/* line 179, ../Code/V2/scss/style.scss */
+/* line 174, ../Code/V2/scss/style.scss */
 .navigation__link:link,
 .navigation__link:visited {
   font-family: "Source Sans Pro", sans-serif;
@@ -195,38 +190,38 @@ footer {
   transition: all .2s;
 }
 
-/* line 191, ../Code/V2/scss/style.scss */
+/* line 186, ../Code/V2/scss/style.scss */
 .navigation__link span {
   margin-right: 1.5rem;
   display: inline-block;
 }
 
-/* line 196, ../Code/V2/scss/style.scss */
+/* line 191, ../Code/V2/scss/style.scss */
 .navigation__link:hover {
   color: #09f;
 }
 
-/* line 200, ../Code/V2/scss/style.scss */
+/* line 195, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80);
   z-index: 200;
   opacity: 1;
 }
 
-/* line 206, ../Code/V2/scss/style.scss */
+/* line 201, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
   visibility: visible;
   opacity: 1;
 }
 
-/* line 212, ../Code/V2/scss/style.scss */
+/* line 207, ../Code/V2/scss/style.scss */
 .navigation__icon {
   position: relative;
   margin-top: 2.5rem;
 }
 
-/* line 217, ../Code/V2/scss/style.scss */
+/* line 212, ../Code/V2/scss/style.scss */
 .navigation__icon,
 .navigation__icon::before,
 .navigation__icon::after {
@@ -236,7 +231,7 @@ footer {
   background-color: aliceblue;
 }
 
-/* line 226, ../Code/V2/scss/style.scss */
+/* line 221, ../Code/V2/scss/style.scss */
 .navigation__icon::before,
 .navigation__icon::after {
   content: '';
@@ -245,44 +240,44 @@ footer {
   transition: all 200ms;
 }
 
-/* line 234, ../Code/V2/scss/style.scss */
+/* line 229, ../Code/V2/scss/style.scss */
 .navigation__icon::before {
   top: -.8rem;
 }
 
-/* line 238, ../Code/V2/scss/style.scss */
+/* line 233, ../Code/V2/scss/style.scss */
 .navigation__icon::after {
   top: .8rem;
 }
 
-/* line 242, ../Code/V2/scss/style.scss */
+/* line 237, ../Code/V2/scss/style.scss */
 .navigation__button:hover .navigation__icon::before {
   top: -1rem;
 }
 
-/* line 246, ../Code/V2/scss/style.scss */
+/* line 241, ../Code/V2/scss/style.scss */
 .navigation__button:hover .navigation__icon::after {
   top: 1rem;
 }
 
-/* line 250, ../Code/V2/scss/style.scss */
+/* line 245, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
   background-color: transparent;
 }
 
-/* line 254, ../Code/V2/scss/style.scss */
+/* line 249, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
   top: 0;
   transform: rotate(135deg);
 }
 
-/* line 259, ../Code/V2/scss/style.scss */
+/* line 254, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg);
 }
 
-/* line 264, ../Code/V2/scss/style.scss */
+/* line 259, ../Code/V2/scss/style.scss */
 #by {
   font-family: 'Arima Madurai', cursive;
   color: #4A676A;
@@ -292,8 +287,8 @@ footer {
   right: 2.5%;
 }
 
-/* COMPONENTS ------------------------------------- */
-/* line 275, ../Code/V2/scss/style.scss */
+/* AbOUT ME ------------------------------------- */
+/* line 271, ../Code/V2/scss/style.scss */
 .numbered-heading {
   display: flex;
   -webkit-box-align: center;
@@ -302,20 +297,54 @@ footer {
   margin: 10px 0px 40px;
   width: 100%;
   font-size: 26px;
+  white-space: nowrap;
 }
 
-/* line 285, ../Code/V2/scss/style.scss */
+/* line 280, ../Code/V2/scss/style.scss */
+.numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -1px;
+  width: 300px;
+  height: 3px;
+  margin-left: 20px;
+  background-color: #09f;
+}
+
+/* line 292, ../Code/V2/scss/style.scss */
+.overline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 296, ../Code/V2/scss/style.scss */
+.overline h2 {
+  margin-bottom: 20px;
+  color: aliceblue;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* line 302, ../Code/V2/scss/style.scss */
+.overline h3 {
+  display: flex;
+  color: #09f;
+}
+
+/* line 309, ../Code/V2/scss/style.scss */
 .skills-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
   gap: 0px 10px;
   padding: 0px;
-  margin: 20px;
+  margin: 20px 20px 40px;
   overflow: hidden;
   list-style: none;
 }
 
-/* line 294, ../Code/V2/scss/style.scss */
+/* line 318, ../Code/V2/scss/style.scss */
 .skills-list li {
   position: relative;
   margin-bottom: 10px;
@@ -323,7 +352,7 @@ footer {
   font-size: 15px;
 }
 
-/* line 300, ../Code/V2/scss/style.scss */
+/* line 324, ../Code/V2/scss/style.scss */
 .skills-list li:before {
   content: "▹";
   position: absolute;
@@ -331,6 +360,23 @@ footer {
   color: #09f;
   font-size: var(--fz-sm);
   line-height: 12px;
+}
+
+/* line 335, ../Code/V2/scss/style.scss */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 339, ../Code/V2/scss/style.scss */
+.profile-container img {
+  border-radius: 50%;
+  width: 300px;
+  outline: 8px solid #09f;
+  outline-offset: 14px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 /* ANIMATIONS ------------------------------------ */
@@ -345,30 +391,30 @@ footer {
 
 /* MEDIA QUERIES ---------------------------------- */
 @media screen and (min-width: 768px) {
-  /* line 326, ../Code/V2/scss/style.scss */
+  /* line 363, ../Code/V2/scss/style.scss */
   .navigation__button {
     top: 4rem;
     left: 4rem;
     height: 7rem;
     width: 7rem;
   }
-  /* line 333, ../Code/V2/scss/style.scss */
+  /* line 370, ../Code/V2/scss/style.scss */
   .navigation__background {
     top: 4.5rem;
     left: 4.5rem;
     height: 6rem;
     width: 6rem;
   }
-  /* line 340, ../Code/V2/scss/style.scss */
+  /* line 377, ../Code/V2/scss/style.scss */
   .navigation__link:link,
   .navigation__link:visited {
     font-size: 3.8rem;
   }
-  /* line 345, ../Code/V2/scss/style.scss */
+  /* line 382, ../Code/V2/scss/style.scss */
   .navigation__icon {
     margin-top: 3.5rem;
   }
-  /* line 349, ../Code/V2/scss/style.scss */
+  /* line 386, ../Code/V2/scss/style.scss */
   .navigation__icon,
   .navigation__icon::before,
   .navigation__icon::after {
