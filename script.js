@@ -9,9 +9,8 @@ navContainer.addEventListener('click', (e) => {
     e.target.parentElement.classList.add('active')
 })
 
+//Mobile Menu Slide Animation
 
-
-// Mobile Menu Animations
 //OPEN TRIGGER
 var openTrigger = $('.menu-trigger');
 var openTriggerTop = openTrigger.find('.menu-trigger-bar.top');
@@ -172,3 +171,23 @@ window.addEventListener('scroll',function(){
   
   lastScrollTop = scrollTop; //New Position Stored
 });
+
+// Experience Tab
+var CONTAINER_PADDING_HALF = "0.5em";
+var expTab = document.querySelector('exp-tab');
+var pointer = document.querySelector('exp-pointer');
+var links = nav.getElementsByTagName("a");
+
+pointer.style.width = "calc(100% /"+links.length+" - "+CONTAINER_PADDING_HALF+")"
+
+for(var i=0; i<links.length; i++){
+  var current = links[i];
+  current.dataset.order = i * 100 + "%";  
+  current.addEventListener("click", movePointer);
+}
+
+
+function movePointer(e) {
+  var order = e.currentTarget.dataset.order;
+  pointer.style.transform = "translate3d("+order+",0,0)"
+}

@@ -89,51 +89,50 @@ section h2 {
 /* HEADER & FOOTER -------------------------------- */
 /* line 95, ../Code/V2/scss/style.scss */
 header {
-  position: absolute;
-  top: 40%;
-  z-index: 1;
-  margin: 20px;
-}
-
-/* line 100, ../Code/V2/scss/style.scss */
-header h1 {
-  font-size: 2.15rem;
-  font-family: "Playfair Display", serif;
-}
-
-/* line 104, ../Code/V2/scss/style.scss */
-header p {
-  font-size: 1.2rem;
-}
-
-/* line 109, ../Code/V2/scss/style.scss */
-footer {
-  padding: 2em 0 0;
-  height: 100px;
-  background-color: #eee;
-  margin-top: 3.5em;
+  background-color: #020020;
+  padding: 0px 25px;
+  display: sticky;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100%;
+  height: var(--nav-height);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
 }
 
 /* NAVIGATION ------------------------------------ */
-/* line 118, ../Code/V2/scss/style.scss */
+/* line 115, ../Code/V2/scss/style.scss */
+.navigation {
+  height: 40px;
+  width: 100%;
+  margin: 0;
+}
+
+/* line 122, ../Code/V2/scss/style.scss */
 .navigation__checkbox {
   display: none;
   z-index: 6;
 }
 
-/* line 123, ../Code/V2/scss/style.scss */
+/* line 127, ../Code/V2/scss/style.scss */
 .navigation__button {
   position: fixed;
-  top: 0rem;
+  top: -0.5rem;
   left: 0rem;
-  height: 5rem;
+  height: 4rem;
   width: 5rem;
   text-align: center;
   z-index: 300;
   cursor: pointer;
 }
 
-/* line 134, ../Code/V2/scss/style.scss */
+/* line 138, ../Code/V2/scss/style.scss */
 .navigation__background {
   position: absolute;
   top: 0rem;
@@ -148,8 +147,9 @@ footer {
   transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-/* line 148, ../Code/V2/scss/style.scss */
+/* line 152, ../Code/V2/scss/style.scss */
 .navigation__nav {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -161,8 +161,8 @@ footer {
   transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* line 160, ../Code/V2/scss/style.scss */
-.navigation__list {
+/* line 165, ../Code/V2/scss/style.scss */
+.mobile-navigation-list {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -172,12 +172,12 @@ footer {
   list-style: none;
 }
 
-/* line 170, ../Code/V2/scss/style.scss */
+/* line 175, ../Code/V2/scss/style.scss */
 .navigation__item {
   margin: 1rem;
 }
 
-/* line 174, ../Code/V2/scss/style.scss */
+/* line 179, ../Code/V2/scss/style.scss */
 .navigation__link:link,
 .navigation__link:visited {
   font-family: "Source Sans Pro", sans-serif;
@@ -190,48 +190,49 @@ footer {
   transition: all .2s;
 }
 
-/* line 186, ../Code/V2/scss/style.scss */
+/* line 191, ../Code/V2/scss/style.scss */
 .navigation__link span {
   margin-right: 1.5rem;
   display: inline-block;
 }
 
-/* line 191, ../Code/V2/scss/style.scss */
+/* line 196, ../Code/V2/scss/style.scss */
 .navigation__link:hover {
   color: #09f;
 }
 
-/* line 195, ../Code/V2/scss/style.scss */
+/* line 200, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80);
   z-index: 200;
   opacity: 1;
 }
 
-/* line 201, ../Code/V2/scss/style.scss */
+/* line 206, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
   visibility: visible;
   opacity: 1;
 }
 
-/* line 207, ../Code/V2/scss/style.scss */
+/* line 212, ../Code/V2/scss/style.scss */
 .navigation__icon {
   position: relative;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
-/* line 212, ../Code/V2/scss/style.scss */
+/* line 217, ../Code/V2/scss/style.scss */
 .navigation__icon,
 .navigation__icon::before,
 .navigation__icon::after {
   display: inline-block;
   width: 2.2rem;
-  height: 2px;
+  height: 4px;
+  border-radius: 5px;
   background-color: aliceblue;
 }
 
-/* line 221, ../Code/V2/scss/style.scss */
+/* line 227, ../Code/V2/scss/style.scss */
 .navigation__icon::before,
 .navigation__icon::after {
   content: '';
@@ -240,44 +241,34 @@ footer {
   transition: all 200ms;
 }
 
-/* line 229, ../Code/V2/scss/style.scss */
+/* line 235, ../Code/V2/scss/style.scss */
 .navigation__icon::before {
-  top: -.8rem;
+  top: -.6rem;
 }
 
-/* line 233, ../Code/V2/scss/style.scss */
+/* line 239, ../Code/V2/scss/style.scss */
 .navigation__icon::after {
-  top: .8rem;
+  top: .6rem;
 }
 
-/* line 237, ../Code/V2/scss/style.scss */
-.navigation__button:hover .navigation__icon::before {
-  top: -1rem;
-}
-
-/* line 241, ../Code/V2/scss/style.scss */
-.navigation__button:hover .navigation__icon::after {
-  top: 1rem;
-}
-
-/* line 245, ../Code/V2/scss/style.scss */
+/* line 243, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
   background-color: transparent;
 }
 
-/* line 249, ../Code/V2/scss/style.scss */
+/* line 247, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
   top: 0;
   transform: rotate(135deg);
 }
 
-/* line 254, ../Code/V2/scss/style.scss */
+/* line 252, ../Code/V2/scss/style.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg);
 }
 
-/* line 259, ../Code/V2/scss/style.scss */
+/* line 257, ../Code/V2/scss/style.scss */
 #by {
   font-family: 'Arima Madurai', cursive;
   color: #4A676A;
@@ -287,8 +278,28 @@ footer {
   right: 2.5%;
 }
 
+/* Hero ----------------------------------------- */
+/* line 269, ../Code/V2/scss/style.scss */
+#home {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  margin: 20px;
+}
+
+/* line 274, ../Code/V2/scss/style.scss */
+#home h1 {
+  font-size: 2.15rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* line 278, ../Code/V2/scss/style.scss */
+#home p {
+  font-size: 1.2rem;
+}
+
 /* AbOUT ME ------------------------------------- */
-/* line 271, ../Code/V2/scss/style.scss */
+/* line 285, ../Code/V2/scss/style.scss */
 .numbered-heading {
   display: flex;
   -webkit-box-align: center;
@@ -300,7 +311,7 @@ footer {
   white-space: nowrap;
 }
 
-/* line 280, ../Code/V2/scss/style.scss */
+/* line 294, ../Code/V2/scss/style.scss */
 .numbered-heading::after {
   content: "";
   display: block;
@@ -312,14 +323,14 @@ footer {
   background-color: #09f;
 }
 
-/* line 292, ../Code/V2/scss/style.scss */
+/* line 306, ../Code/V2/scss/style.scss */
 .overline {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* line 296, ../Code/V2/scss/style.scss */
+/* line 310, ../Code/V2/scss/style.scss */
 .overline h2 {
   margin-bottom: 20px;
   color: aliceblue;
@@ -327,13 +338,13 @@ footer {
   font-family: "Playfair Display", serif;
 }
 
-/* line 302, ../Code/V2/scss/style.scss */
+/* line 316, ../Code/V2/scss/style.scss */
 .overline h3 {
   display: flex;
   color: #09f;
 }
 
-/* line 309, ../Code/V2/scss/style.scss */
+/* line 323, ../Code/V2/scss/style.scss */
 .skills-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -344,7 +355,7 @@ footer {
   list-style: none;
 }
 
-/* line 318, ../Code/V2/scss/style.scss */
+/* line 332, ../Code/V2/scss/style.scss */
 .skills-list li {
   position: relative;
   margin-bottom: 10px;
@@ -352,7 +363,7 @@ footer {
   font-size: 15px;
 }
 
-/* line 324, ../Code/V2/scss/style.scss */
+/* line 338, ../Code/V2/scss/style.scss */
 .skills-list li:before {
   content: "▹";
   position: absolute;
@@ -362,21 +373,195 @@ footer {
   line-height: 12px;
 }
 
-/* line 335, ../Code/V2/scss/style.scss */
+/* line 349, ../Code/V2/scss/style.scss */
 .profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
-/* line 339, ../Code/V2/scss/style.scss */
+/* line 354, ../Code/V2/scss/style.scss */
 .profile-container img {
+  max-width: 300px;
   border-radius: 50%;
-  width: 300px;
+  width: 100%;
   outline: 8px solid #09f;
   outline-offset: 14px;
-  cursor: pointer;
   transition: 0.3s;
+}
+
+/* EXPERIENCE ------------------------------------ */
+/* line 366, ../Code/V2/scss/style.scss */
+.work-labels {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 369, ../Code/V2/scss/style.scss */
+.work-labels button {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 120px;
+  padding: 0px 15px;
+  border-bottom: 2px solid lightblue;
+  text-align: center;
+  height: 42px;
+  color: aliceblue;
+  background-color: transparent;
+}
+
+/* line 383, ../Code/V2/scss/style.scss */
+.work-labels button:focus {
+  background-color: rgba(0, 155, 255, 0.3);
+  color: #09f;
+}
+
+/* line 390, ../Code/V2/scss/style.scss */
+.nav {
+  position: relative;
+  padding: 1em;
+}
+
+/* line 395, ../Code/V2/scss/style.scss */
+.nav__pointer {
+  z-index: 1;
+  position: absolute;
+  top: 0.6em;
+  left: 1em;
+  background-color: #bada55;
+  height: 1.8em;
+  transition: transform 0.25s ease-in-out;
+  border-radius: 0.3em;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* line 408, ../Code/V2/scss/style.scss */
+.nav__list {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Decoration styles */
+/* line 418, ../Code/V2/scss/style.scss */
+exp-tab {
+  text-align: center;
+  width: 420px;
+  margin: 0 auto;
+  background: #f5f5f5;
+  display: block;
+}
+
+/* line 426, ../Code/V2/scss/style.scss */
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+/* line 430, ../Code/V2/scss/style.scss */
+.scrolling-wrapper input {
+  display: none;
+}
+
+/* line 433, ../Code/V2/scss/style.scss */
+.scrolling-wrapper .card {
+  display: inline-block;
+  width: 100px;
+  padding: 5px 0px;
+  margin: 0;
+  text-align: center;
+  border: 2px solid pink;
+  cursor: pointer;
+}
+
+/* line 441, ../Code/V2/scss/style.scss */
+.scrolling-wrapper .card h3 {
+  font-size: 1rem;
+}
+
+/* line 448, ../Code/V2/scss/style.scss */
+.nav {
+  flex-wrap: nowrap;
+}
+
+/* line 452, ../Code/V2/scss/style.scss */
+.nav-tabs {
+  padding: 0;
+}
+
+/* line 456, ../Code/V2/scss/style.scss */
+.nav-item button {
+  padding: 10px 0px;
+  width: 120px;
+  border-radius: 15px 15px 0px 0px;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+/* line 465, ../Code/V2/scss/style.scss */
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: aliceblue;
+  background-color: #09f;
+  border: 5px solid #09f;
+}
+
+/* line 471, ../Code/V2/scss/style.scss */
+#myTabContent {
+  margin-top: 10px;
+}
+
+/* line 475, ../Code/V2/scss/style.scss */
+.exp-content-list {
+  padding: 10px 40px;
+}
+
+/* line 480, ../Code/V2/scss/style.scss */
+.tab-content h3 {
+  font-size: 1.25rem;
+}
+
+/* line 483, ../Code/V2/scss/style.scss */
+.tab-content li {
+  padding: 0;
+  list-style-type: none;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* line 489, ../Code/V2/scss/style.scss */
+.tab-content li:before {
+  content: "▹";
+  position: absolute;
+  left: 20px;
+  color: #09f;
+  font-size: 1.5rem;
+}
+
+/* line 499, ../Code/V2/scss/style.scss */
+.exp-link {
+  color: #09f;
+}
+
+/* line 504, ../Code/V2/scss/style.scss */
+a {
+  text-decoration: none;
+  font-weight: 600;
+  user-select: none;
+}
+
+/* line 510, ../Code/V2/scss/style.scss */
+a,
+a:visited {
+  color: #09f;
 }
 
 /* ANIMATIONS ------------------------------------ */
@@ -391,30 +576,30 @@ footer {
 
 /* MEDIA QUERIES ---------------------------------- */
 @media screen and (min-width: 768px) {
-  /* line 363, ../Code/V2/scss/style.scss */
+  /* line 529, ../Code/V2/scss/style.scss */
   .navigation__button {
     top: 4rem;
     left: 4rem;
     height: 7rem;
     width: 7rem;
   }
-  /* line 370, ../Code/V2/scss/style.scss */
+  /* line 536, ../Code/V2/scss/style.scss */
   .navigation__background {
     top: 4.5rem;
     left: 4.5rem;
     height: 6rem;
     width: 6rem;
   }
-  /* line 377, ../Code/V2/scss/style.scss */
+  /* line 543, ../Code/V2/scss/style.scss */
   .navigation__link:link,
   .navigation__link:visited {
     font-size: 3.8rem;
   }
-  /* line 382, ../Code/V2/scss/style.scss */
+  /* line 548, ../Code/V2/scss/style.scss */
   .navigation__icon {
     margin-top: 3.5rem;
   }
-  /* line 386, ../Code/V2/scss/style.scss */
+  /* line 552, ../Code/V2/scss/style.scss */
   .navigation__icon,
   .navigation__icon::before,
   .navigation__icon::after {
