@@ -413,7 +413,7 @@ p {
     font-size:16px;
     font-weight:bold;
 }
-#footer a {
+.footer-name {
     color: #009900 ;
 }
 #particles-js {
